@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap');
+:root {
+    --header-color: #4f5050;
+    --navbar-color1: #494747;
+    --navbar-color2: #222223;
+    --text-color: #ffffff;
+    --company-color: #707070;
+    --circle-color: rgb(54, 54, 54);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    min-height: 100rem;
+    background-color: var(--navbar-color2);
+}
+
+header {
+    height: 4rem;
+    position: sticky;
+    top: 0;
+    z-index: 100000;
+}
+
+header nav {
+    display: flex;
+    padding: 20px;
+    height: 100%;
+    background-color: var(--navbar-color1);
+    box-shadow: 2px 2px 2px 2px #494747;
+    position: relative;
+    /* overflow-x: hidden; */
+    /* overflow-y: hidden; */
+}
+
+header nav div.name {
+    /* background-color: aqua; */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav div.name i,
+header nav div.name h1 {
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+header nav div.name h1 {
+    color: var(--text-color);
+}
+
+/* For List */
+
+header nav div.list {
+    /* background-color: blue; */
+    flex: 2.5;
+}
+
+header nav div.list ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    list-style-type: none;
+}
+
+header nav div.list ul li {
+    font-size: 1.6rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+header nav div.list ul li a:hover {
+    transition: all.5s;
+    top: 6px;
+    text-decoration: underline;
+}
+
+header nav div.list ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 0 1.3rem;
+    font-size: 15px;
+}
+
+/* For icons */
+
+header nav div.icon {
+    /* background-color: red; */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav div.icon a {
+    padding: 0px .7rem;
+    font-size: 12px;
+}
+
+header nav div.icon a>i {
+    color: var(--text-color);
+    
+}
+
+header nav div.icon a>i:hover {
+    color: rgb(70, 96, 168);
+}
+
+header nav div.mediaIcon {
+    flex: .3;
+    display: flex;
+    align-items: center;
+}
+
+header nav div.mediaIcon button {
+    background-color: transparent;
+    border: none;
+    display: none;
+    color: var(--text-color);
+}
+
+/* For Section */
+
+section.section {
+    /* background-color: aqua; */
+    background-color: #504F4F;
+    min-height: 40rem;
+    display: flex;
+    padding: 50px;
+    position: relative;
+    align-items: center;
+    /* z-index: -1; */
+}
+
+/* For Name and intro section */
+
+/* For name */
+
+section.section div.nameAndIntro {
+    width: 48%;
+    /* background-color: red; */
+    min-height: 20rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    /* align-items: center; */
+    padding: 0 0 0 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+section.section div.nameAndIntro div.name {
+    /* background-color: yellow; */
+    height: 60%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+section.section div.nameAndIntro div.name h1 span {
+    opacity: 0.1;
+}
+
+/* For line */
+
+section.section div.nameAndIntro div.line {
+    margin: 1rem;
+    width: 35%;
+    background-color: rgb(240, 240, 36);
+    height: 5px;
+}
+
+/* for intro */
+
+section.section div.nameAndIntro div.intro {
+    /* background-color: blueviolet; */
+    width: 48%;
+    min-height: 20%;
+}
+
+section.section div.nameAndIntro div.intro span {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+
+section.section div.nameAndIntro div.name h2,
+section.section div.nameAndIntro div.name h1 {
+    font-size: 2.2rem;
+    letter-spacing: .4rem;
+    color: white;
+}
+
+/* For Image Section */
+
+section.section div.image {
+    position: absolute;
+    /* background-color: blue; */
+    width: 45%;
+    height: 90%;
+    left: 21rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* display: none; */
+}
+
+section.section div.image div.circle {
+    margin-top: 2rem;
+    background-color: rgb(54, 54, 54);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: relative;
+    /* z-index: -1; */
+}
+
+section.section div.image div.circle img {
+    height: 80%;
+    width: 80%;
+    background-size: cover;
+    object-fit: cover;
+    position: absolute;
+    bottom: -2rem;
+    /*z-index: -1;*/
+}
+
+/* For Service */
+
+section.section div.serviceContainer {
+    min-height: 15rem;
+    /* background-color: yellow; */
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 3px 0 10rem;
+    z-index: 10;
+    /* justify-content: center; */
+}
+
+section.section div.serviceContainer div.service {
+    /* background-color: palevioletred; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40%;
+}
+
+section.section div.serviceContainer div.service h1 {
+    color: #ffffff;
+    /* background-color: #494747; */
+    font-size: 2rem;
+    margin-bottom: .4rem;
+}
+
+section.section div.serviceContainer div.service p {
+    font-size: 1.2rem;
+    margin-bottom: .7rem;
+    color: #ffffff;
+}
+
+section.section div.serviceContainer div.service div.icons a {
+    pointer-events: auto;
+    cursor: pointer !important;
+    /* z-index: 100; */
+}
+
+section.section div.serviceContainer div.service div.icons a i {
+    color: white;
+    margin: 0 0 0 1rem;
+}
+
+section.section div.serviceContainer div.service div.icons a i:hover {
+    color: rgb(70, 96, 168);
+}
+
+/* For All a */
+
+a {
+    text-decoration: none;
+}
+
+i.fa-arrow-right {
+    pointer-events: auto;
+    cursor: pointer !important;
+    /*position: relative;
+    */
+}
+
+i.fa-arrow-right:hover {
+    position: relative;
+    left: 5px;
+    /* font-size: 4rem; */
+}
+
+/* For Company Names */
+
+section.company {
+    min-height: 10rem;
+    /* background-color: yellow; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    top: -4rem;
+    /* display: none; */
+}
+
+section.company div.companyBox {
+    background-color: var(--company-color);
+    width: 80%;
+    min-height: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 2px 2px 4px 2px rgb(26, 25, 25);
+}
+
+section.company div.companyBox div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 4rem;
+    background-color: var(--circle-color);
+    width: 13rem;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+/* FOR needs and project */
+
+section.needsAndProject {
+    min-height: 35rem;
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+
+/* For needs */
+
+section.needsAndProject div.need {
+    width: 45%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.needsAndProject div.need div.content {
+    /* background-color: blue; */
+    width: 80%;
+}
+
+section.needsAndProject div.need div.content h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    padding: 1rem 0;
+    text-transform: capitalize;
+}
+
+section.needsAndProject div.need div.content p {
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: #ebebeb;
+}
+
+section.needsAndProject div.need div.numbersContainer {
+    width: 80%;
+    /* background-color: aqua; */
+    min-height: 12rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.needsAndProject div.need div.numbersContainer div.number {
+    width: 40%;
+    height: 100%;
+    /* background-color: orange; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.needsAndProject div.need div.numbersContainer div.number div.num-value {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+/* for projects */
+
+section.needsAndProject div.projectContainer {
+    width: 45%;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.needsAndProject div.projectContainer div.project {
+    width: 100%;
+    height: 23%;
+    /* background-color: cadetblue; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 1rem;
+    border-bottom: 4px solid var(--circle-color);
+}
+
+/* For image */
+
+section.needsAndProject div.projectContainer div.project div.image {
+    height: 50%;
+    width: 25%;
+    /* background-color: yellow; */
+}
+
+section.needsAndProject div.projectContainer div.project div.image img {
+    height: 100%;
+    width: 100%;
+    /* background-color: blue; */
+    /* background-size: contain; */
+    object-fit: cover;
+}
+
+/* For Content of projects */
+
+section.needsAndProject div.projectContainer div.project div.content {
+    /* background-color: orange; */
+    padding: 0 0 0 1rem;
+    width: 35%;
+}
+
+section.needsAndProject div.projectContainer div.project div.content h1:first-child {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    color: white;
+}
+
+section.needsAndProject div.projectContainer div.project div.content h1:nth-child(2) {
+    color: #ebebeb;
+    font-size: 1.2rem;
+}
+
+/* for arrow */
+
+section.needsAndProject div.projectContainer div.project div.rightArrow {
+    width: 40%;
+    /* background-color: #000; */
+    height: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+@media screen and (max-width:760px) {
+    header nav div.name i,
+    header nav div.name h1 {
+        font-size: 1.8rem;
+        padding: .3rem;
+    }
+    header nav div.list ul {
+        flex-direction: column;
+        /* top: 42px; */
+        /* height: 8rem; */
+    }
+    header nav div.list {
+        background-color: var(--text-color);
+        position: absolute;
+        display: none;
+        right: 0;
+        width: 100%;
+        top: 4rem;
+    }
+    header nav div.list ul li {
+        color: #000;
+        margin: .5rem 0px;
+    }
+
+    header nav div.mediaIcon button {
+        display: inline-block;
+    }
+    /* for navbar down  */
+    section.section {
+        flex-direction: column;
+        position: static;
+        overflow: hidden;
+    }
+    /* For Name and intro section */
+    /* For name */
+    section.section div.nameAndIntro {
+        width: 100%;
+        /* background-color: red; */
+        order: 0;
+        min-height: 11rem;
+        align-items: center;
+        position: static;
+    }
+    section.section div.nameAndIntro div.name {
+        /* background-color: yellow; */
+        justify-content: center;
+        width: 95%;
+    }
+  
+    section.section div.nameAndIntro div.name h1 span {
+        opacity: 1;
+    }
+    section.section div.nameAndIntro div.intro {
+        /* background-color: blueviolet; */
+        width: 95%;
+        min-height: 20%;
+    }
+    /* For Image Section */
+    section.section div.image {
+        position: static;
+        order: 1;
+        min-width: 15rem;
+        min-height: 15rem;
+        /* background-color: blue; */
+    }
+    section.section div.image div.circle {
+        position: static;
+        min-height: 100%;
+        min-width: 100%;
+        align-items: center;
+    }
+
+    /* For Service */
+    section.section div.serviceContainer {
+        order: 2;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0 3px 0 2px;
+    }
+    section.section div.serviceContainer div.service {
+        width: 80%;
+    }
+    /* Section for company */
+    section.company {
+        position: static;
+        margin-top: .8rem;
+    }
+    section.company div.companyBox {
+        background-color: var(--company-color);
+        width: 80%;
+        min-height: 8rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    section.company div.companyBox div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        min-height: 4rem;
+        background-color: var(--circle-color);
+        width: 8rem;
+        margin-bottom: .5rem;
+        margin-top: .5rem;
+        margin-left: .3rem;
+    }
+    section.needsAndProject {
+        flex-direction: column;
+        /* background-color: green; */
+        align-items: center;
+    }
+    section.needsAndProject div.need {
+        /* background-color: yellow; */
+        margin-bottom: 1rem;
+        width: 80%;
+    }
+    section.needsAndProject div.projectContainer {
+        width: 80%;
+    }
+    section.needsAndProject div.projectContainer div.project div.content h1:first-child {
+        font-size: 1.2rem;
+        margin-bottom: .3rem;
+    }
+    section.needsAndProject div.projectContainer div.project div.content h1:nth-child(2) {
+        font-size: .9rem;
+    }
+}
